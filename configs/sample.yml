@@ -1,0 +1,19 @@
+data:
+  data_name: 'test'
+  dataset:  # test dataset
+    name: pl
+    path: ./data/crossdocked_pocket10
+    split: ./data/split_by_name.pt
+
+sample:
+  seed: 3407
+  mask_init: True
+  num_samples: 300
+  beam_size: 500
+  max_steps: 300
+  threshold:
+    focal_threshold: 0.5
+    pos_threshold: 0.0625
+    element_threshold: 0.3
+    hasatom_threshold: 0.6
+    bond_threshold: 0.4

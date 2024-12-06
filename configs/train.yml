@@ -1,0 +1,75 @@
+model:
+  vn: vn
+  hidden_channels: 64
+  hidden_channels_vec: 16
+  encoder:
+    name: cftfm
+    hidden_channels: 64
+    hidden_channels_vec: 16
+    edge_channels: 16
+    key_channels: 32
+    num_heads: 4
+    num_interactions: 4
+    cutoff: 10.0
+    knn: 48 # kNN Graph
+  field:
+    name: classifier
+    num_filters: 32
+    num_filters_vec: 8
+    edge_channels: 16
+    num_heads: 4
+    cutoff: 10.0
+    knn: 32 # kNN Graph
+  position:
+    num_filters: 32
+    n_component: 3
+
+train:
+  save: True
+  seed: 3407
+  use_apex: False
+  batch_size: 16
+  num_workers: 8
+  pin_memory: True
+  resume_train: False
+  ckpt_name: None
+  start_epoch: None
+  max_iters: 500000
+  val_freq: 5000
+  pos_noise_std: 0.1
+  max_grad_norm: 100.0
+  optimizer:
+    type: adam
+    lr: 2.e-4
+    weight_decay: 0
+    beta1: 0.99
+    beta2: 0.999
+  scheduler:
+    type: plateau
+    factor: 0.6
+    patience: 8
+    min_lr: 1.e-5
+  transform:
+    mask:
+      type: mixed
+      min_ratio: 0.0
+      max_ratio: 1.1
+      min_num_masked: 1
+      min_num_unmasked: 0 
+      p_random: 0.15
+      p_bfs: 0.6
+      p_invbfs: 0.25
+    contrastive:
+      num_real: 20
+      num_fake: 20
+      pos_real_std: 0.05
+      pos_fake_std: 2.0
+    edgesampler:
+      k: 8
+
+
+dataset:
+  index_path: /home/dongxy/code/SurfGen-main/data/crossdock_pocket10/index.pkl
+  processed_path: /home/dongxy/code/SurfGen-main/data/crossdock_data_gds.lmdb
+  name2id_path: /home/dongxy/code/SurfGen-main/data/crossdock_gdsname2id.pt
+  split: /home/dongxy/code/SurfGen-main/data/split_by_name.pt
