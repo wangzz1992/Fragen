@@ -6,22 +6,15 @@ Install via conda .yml file (cuda 11.3)
 
 ```python
 conda install mamba
-mamba env create -f surfgen_env.yml -n surfgen
-conda activate surfgen 
+mamba env create -f surfgen_env.yml -n fragen
+conda activate fragen 
 ```
 
 If you're reluctant to use mamba: 
 
 ```python
-conda env create -f surfgen_env.yml -n surfgen
-```
-
-We also provide conda-packed file [here](https://doi.org/10.5281/zenodo.7758282). Download it and then unzip it in your conda/envs/dir. For me, the directory is ~/.conda/envs. Special thanks to the creators and organizers of zenodo, which provides a free platform to store large files for academic use. 
-
-```shell
-mkdir ~/.conda/envs/surfgen
-tar -xzvf surfgen.tar.gz -C ~/.conda/envs/surfgen
-conda activate surfgen
+conda env create -f fragen_env.yml -n fragen
+conda activate fragen
 ```
 
 ## Data
