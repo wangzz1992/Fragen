@@ -1,4 +1,4 @@
-name: SurfGen
+name: fragen
 channels:
   - pyg
   - <unknown>
@@ -429,4 +429,4 @@ dependencies:
     - xgboost==1.7.6
     - xxhash==3.3.0
     - yarl==1.9.2
-prefix: /home/haotian/.conda/envs/SurfGen
+
