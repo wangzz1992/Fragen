@@ -1,13 +1,5 @@
 # :loudspeaker: SurfGen: Learning on Topological Surface and Geometric Structure for 3D Molecular Generation
 
-##<div align=center>
-##<img src="./assets/toc.png" width="50%" height="50%" alt="TOC" align=center />
-##</div>
-
-
-
-<center> The illustration of the generation process </center>
-
 ## Environment
 
 Install via conda .yml file (cuda 11.3)
