@@ -1,8 +1,8 @@
 # :loudspeaker: SurfGen: Learning on Topological Surface and Geometric Structure for 3D Molecular Generation
 
-<div align=center>
-<img src="./assets/toc.png" width="50%" height="50%" alt="TOC" align=center />
-</div>
+#<div align=center>
+#<img src="./assets/toc.png" width="50%" height="50%" alt="TOC" align=center />
+#</div>
 
 
 
