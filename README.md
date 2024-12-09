@@ -34,7 +34,7 @@ If it's inconvenient for you, we also provided the [processed data](https://doi.
 
 ##### Approach 1
 
-Although we have prepared the required data for training and evaluation above. But you may want to apply SurfGen in your own case. So we provide the guidelines for creating the surf_maker environment.
+Although we have prepared the required data for training and evaluation above. But you may want to apply Fragen in your own case. So we provide the guidelines for creating the surf_maker environment.
 
 ```python
 conda create -n surf_maker pymesh2 jupyter scipy joblib biopython rdkit plyfile -c conda-forge
