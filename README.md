@@ -1,4 +1,4 @@
-# :loudspeaker: SurfGen: Learning on Topological Surface and Geometric Structure for 3D Molecular Generation
+# :loudspeaker: Fragen: Fragment-based polypharmacological molecule generation model
 
 ## Environment
 
