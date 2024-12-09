@@ -5,14 +5,6 @@
 Install via conda .yml file (cuda 11.3)
 
 ```python
-conda install mamba
-mamba env create -f surfgen_env.yml -n fragen
-conda activate fragen 
-```
-
-If you're reluctant to use mamba: 
-
-```python
 conda env create -f fragen_env.yml -n fragen
 conda activate fragen
 ```
