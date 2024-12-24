@@ -14,14 +14,6 @@ from rdkit.Chem import AllChem
 from rdkit.Chem import Descriptors
 from rdkit.Chem import rdMolTransforms
 from rdkit.Chem.rdchem import HybridizationType
-# from rdkit.Chem import rdDecomposition # 已废弃
-# [MODIFIED] RDKit相关导入
-from rdkit import Chem
-from rdkit.Chem import AllChem
-from rdkit.Chem import Descriptors
-from rdkit.Chem import rdMolTransforms
-from rdkit.Chem.rdchem import HybridizationType
-# from rdkit.Chem import rdDecomposition  # 删除这行
 from rdkit.Chem.Draw import IPythonConsole
 
 # [NEW] 如果需要分解相关功能，可以使用以下替代方法
