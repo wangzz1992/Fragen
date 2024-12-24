@@ -163,6 +163,7 @@ class SpatialClassifierVN(Module):
 
         # 如果有任何匹配的 SMARTS，返回 True 和匹配列表
         return len(matched_alerts) > 0, matched_alerts
+        
     def _update_molecule(self, y_cls, pos_query):
         """
         根据预测的化学类型和坐标更新分子对象。
@@ -227,6 +228,7 @@ class SpatialClassifierVN(Module):
             return no_bond_prediction
 
         return edge_pred
+        
     def _check_and_resample(self, edge_pred, edge_index_query, dist_ij, bond_mask):
         """
         检查分子价键规则和不稳定化学键，如果不满足则移除无效的键。
