@@ -12,7 +12,7 @@ from tqdm.auto import tqdm
 from utils.transforms import *
 from utils.misc import load_config
 from utils.reconstruct import *
-from models.surfgen import SurfGen
+from models.fragen import Fragen
 from utils.chem import read_pkl, write_pkl
 from utils.sample import get_init, get_next, logp_to_rank_prob, pdb_to_pocket_data
 from utils.sample import STATUS_FINISHED, STATUS_RUNNING
