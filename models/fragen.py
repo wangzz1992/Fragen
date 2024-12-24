@@ -12,7 +12,7 @@ from .generation import FrontierLayerVN  # attachment
 from .generation import PositionPredictor # geometry generation
 from utils.misc import unique
 
-class SurfGen(Module):
+class Fragen(Module):
 
     def __init__(self, config, num_classes, num_bond_types, protein_atom_feature_dim, ligand_atom_feature_dim):
         super().__init__()
