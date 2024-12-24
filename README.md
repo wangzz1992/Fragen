@@ -83,7 +83,7 @@ To generate the example, run the gen.py. The model's parameters can be downloade
 We provide an example of the pharmaceutic target for Covid-19, 3cl protein, in the ./example, run the following code to generate inhibitors directly inside the pocket! 
 
 ```python
-python gen.py --outdir example --check_point ./ckpt/val_119.pt --ply_file ./example/3cl_pocket_8.0_res_1.5.ply
+python gen.py --outdir example --check_point ./ckpt/val_72.pt --ply_file ./example/3cl_pocket_8.0_res_1.5.ply
 ```
 
 <div align=center>
