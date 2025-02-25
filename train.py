@@ -6,7 +6,7 @@ import torch
 from torch.nn.utils import clip_grad_norm_
 from torch_geometric.loader import DataLoader
 
-from models.surfgen import SurfGen
+from models.fragen import Fragen
 from utils.datasets import *
 from utils.transforms import *
 from utils.misc import *
