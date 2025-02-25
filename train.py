@@ -80,7 +80,7 @@ train_loader = DataLoader(train_set, config.train.batch_size , shuffle=True,  ex
 val_loader = DataLoader(val_set, config.train.batch_size, shuffle=False, follow_batch=follow_batch, exclude_keys = collate_exclude_keys,)
 
 
-model = SurfGen(
+model = Fragen(
     config.model, 
     num_classes = contrastive_sampler.num_elements,
     num_bond_types = edge_sampler.num_bond_types,
