@@ -108,7 +108,7 @@ transform = Compose([
 
 
 ckpt = torch.load(args.check_point, map_location=args.device)
-model = SurfGen(
+model = Fragen(
     ckpt['config'].model, 
     num_classes = contrastive_sampler.num_elements,
     num_bond_types = 3,
