@@ -68,12 +68,6 @@ python ./data/surf_maker/generate_surface.ipynb
 
 If the surface is generated, you will find the .ply file in the ./data/surf_maker
 
-And we provide the generated surface file at ./data, namely 3cl_pocket_8.0_res_1.5.ply for further generation. 
-
-<div align=center>
-<img src="./assets/surface.png" width="50%" height="50%" alt="TOC" align=center />
-</div>
-
 
 
 ## Generation 
@@ -85,10 +79,6 @@ We provide an example of the pharmaceutic target for Covid-19, 3cl protein, in t
 ```python
 python gen.py --outdir example --check_point ./ckpt/val_72.pt --ply_file ./example/3cl_pocket_8.0_res_1.5.ply
 ```
-
-<div align=center>
-<img src="./assets/3cl_gen.png" width="50%" height="50%" alt="TOC" align=center />
-</div>
 
 
 
