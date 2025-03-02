@@ -84,7 +84,7 @@ def mol_property_loss(mol):
     count_fuzed_bond = ring_bond.values()
     count_fuzed_bond = [value for value in ring_bond.values() if value > 1]
 
-    if len(count_fuzed_bond) < 2 and MW < 500 and NHA < 10 and NHB < 5 and RoC < 10 and TPSA < 140 and NRB < 30:
+    if len(count_fuzed_bond) < 2 and MW < 500 and NHA < 10 and NHB < 5 and RoC < 5 and TPSA < 140 and NRB < 10:
         return True
     else:
         return False
