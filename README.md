@@ -63,7 +63,7 @@ When the base python environment was created, then install [APBS-3.0.0](https://
 Now you have deployed all the dependent environments. Please follow the ./data/surf_maker for making surface data. Or run the ./data/surf_maker/surf_maker_test.py for testing whether you have figured out this environment successfully. 
 
 ```python
-python ./data/surf_maker/generate_surface.ipynb
+python surf_maker.py --pdb_file you_own.pdb --lig_file 
 ```
 
 If the surface is generated, you will find the .ply file in the ./data/surf_maker
