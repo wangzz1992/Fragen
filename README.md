@@ -63,7 +63,7 @@ When the base python environment was created, then install [APBS-3.0.0](https://
 Now you have deployed all the dependent environments. Please follow the ./data/surf_maker for making surface data. Or run the ./data/surf_maker/surf_maker_test.py for testing whether you have figured out this environment successfully. 
 
 ```python
-python surf_maker.py --pdb_file you_own.pdb --lig_file 
+python surf_maker.py --pdb_file you_own.pdb --lig_file your own.sdf
 ```
 
 If the surface is generated, you will find the .ply file in the ./data/surf_maker
@@ -77,7 +77,7 @@ To generate the example, run the gen.py. The model's parameters can be downloade
 We provide an example of the pharmaceutic target for major depressive disorder, SERT and 5-HT receptors, in the ./example, run the following code to generate inhibitors directly inside the pocket! 
 
 ```python
-python gen.py --outdir example --check_point ./ckpt/val_72.pt --ply_file ./example/receptor_0426_pocket_8.0.ply
+python gen.py --outdir example --check_point ./ckpt/val_72.pt --ply_file ./example/your_own.ply
 ```
 
 
