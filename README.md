@@ -68,11 +68,19 @@ python surf_maker.py --pdb_file you_own.pdb --lig_file your own.sdf
 
 If the surface is generated, you will find the .ply file in the ./data/surf_maker
 
+## Grow 
 
+To perform fragment growing, run the grow.py. The model's parameters can be downloaded [here](https://drive.google.com/file/d/12VCBExce9RNyrbFbyhrhXaBN7Ogwu05F/view?usp=drive_link). Put it at ./ckpt. 
+
+We provide an example of the pharmaceutic target for major depressive disorder, SERT and 5-HT receptors, in the ./example, run the following code to generate inhibitors directly inside the pocket! 
+
+```python
+python grow.py --outdir example_frag --check_point ./ckpt/surfgen.pt --ply_file ./example_frag/your_own.ply --frag_path ./example/your_own.sdf
+```
 
 ## Generation 
 
-To generate the example, run the gen.py. The model's parameters can be downloaded [here](https://drive.google.com/file/d/12VCBExce9RNyrbFbyhrhXaBN7Ogwu05F/view?usp=drive_link). Put it at ./ckpt. 
+To generate the whole molecule, run the gen.py. The model's parameters can be downloaded [here](https://drive.google.com/file/d/12VCBExce9RNyrbFbyhrhXaBN7Ogwu05F/view?usp=drive_link). Put it at ./ckpt. 
 
 We provide an example of the pharmaceutic target for major depressive disorder, SERT and 5-HT receptors, in the ./example, run the following code to generate inhibitors directly inside the pocket! 
 
