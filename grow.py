@@ -1,5 +1,5 @@
 # Example for fragment-based generation:
-# python gen.py --outdir example_frag --check_point ./ckpt/surfgen.pt --ply_file ./example/adrb1/adrb_pocket_8.0.ply --frag_path ./example/adrb1/2VT4_frag.sdf
+# python grow.py --outdir example_frag --check_point ./ckpt/surfgen.pt --ply_file ./example/adrb1/adrb_pocket_8.0.ply --frag_path ./example/adrb1/2VT4_frag.sdf
 
 import os
 import argparse
