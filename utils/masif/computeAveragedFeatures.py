@@ -5,6 +5,7 @@ This module implements the neighbor-based feature averaging approach where:
 - Surface vertices search for protein atoms within a configurable radius (default 2.5Å)
 - If N>=1 neighbor atoms are found, compute the average of their features
 - If N=0 neighbor atoms, fall back to the original (nearest atom) feature value
+Modified by Wang Z.Z and Dong X.Y.
 """
 
 import numpy as np
