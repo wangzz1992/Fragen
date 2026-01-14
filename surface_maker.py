@@ -19,8 +19,12 @@ from computeAPBS import computeAPBS
 from computeCharges import computeCharges, assignChargesToNewMesh
 from computeHydrophobicity import computeHydrophobicity
 from computeMSMS import computeMSMS
-from fixmesh import fix_mesh
+from fixmesh import fix_mesh 
 from save_ply import save_ply
+from computeAveragedFeatures import (
+    compute_averaged_vertex_features,
+    assign_averaged_features_to_new_mesh,
+)   
 
 
 arg_parser = argparse.ArgumentParser(description="Generates a protein surface mesh (PLY format) for a binding pocket.") # Renamed parser
