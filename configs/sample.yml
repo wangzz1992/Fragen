@@ -6,14 +6,14 @@ data:
     split: ./data/split_by_name.pt
 
 sample:
-  seed: 3407
+  seed: 2020
   mask_init: True
   num_samples: 300
   beam_size: 500
-  max_steps: 300
+  max_steps: 50
   threshold:
     focal_threshold: 0.5
-    pos_threshold: 0.0625
+    pos_threshold: 0.25
     element_threshold: 0.3
     hasatom_threshold: 0.6
     bond_threshold: 0.4
