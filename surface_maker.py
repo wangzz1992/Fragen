@@ -13,7 +13,7 @@ from scipy.spatial import distance, KDTree
 from IPython.utils import io
 from joblib import Parallel, delayed
 import sys
-sys.path.append('../utils/masif')
+sys.path.append('./utils/masif')
 from compute_normal import compute_normal
 from computeAPBS import computeAPBS
 from computeCharges import computeCharges, assignChargesToNewMesh
