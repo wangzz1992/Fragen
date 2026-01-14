@@ -1,6 +1,7 @@
 """
 atom_params.py: Atom-level parameters for surface feature computation.
 Contains AMBER force field partial charges and hydrophobicity labels.
+Modified by Wang Z.Z and Dong X.Y.
 """
 
 # AMBER ff14SB partial charges for standard amino acids
