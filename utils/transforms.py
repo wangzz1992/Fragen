@@ -53,30 +53,26 @@ class RefineData(object):
         # delete H atom of ligand
         ligand_element = data.ligand_element
         is_H_ligand = (ligand_element == 1)
-        """提取了 data 对象中的 protein_feature 和 ligand_element 属性。然后，通过检查 ligand_element 是否等于 1 来确定哪些配体元素是氢原子。"""
+
         if torch.sum(is_H_ligand) > 0:
             not_H_ligand = ~is_H_ligand
             data.ligand_atom_feature = data.ligand_atom_feature[not_H_ligand]
             data.ligand_element = data.ligand_element[not_H_ligand]
             data.ligand_pos = data.ligand_pos[not_H_ligand]
-            """创建一个 not_H_ligand 的布尔数组，该数组的每个元素表示对应的配体元素是否不是氢原子。
-            然后，使用这个 not_H_ligand 数组来更新 data 对象中的 ligand_atom_feature、ligand_element 和 ligand_pos 属性，从而删除所有的氢原子。"""
+
             # nbh
             index_atom_H = torch.nonzero(is_H_ligand)[:, 0]
             index_changer = -np.ones(len(not_H_ligand), dtype=np.int64)
             index_changer[not_H_ligand] = np.arange(torch.sum(not_H_ligand)) # type: ignore
             new_nbh_list = [value for ind_this, value in zip(not_H_ligand, data.ligand_nbh_list.values()) if ind_this]
             data.ligand_nbh_list = {i:[index_changer[node] for node in neigh if node not in index_atom_H] for i, neigh in enumerate(new_nbh_list)}
-            """接下来，代码将创建一个 index_atom_H 的数组，该数组包含所有氢原子的索引。然后，代码将创建一个 index_changer 的数组，该数组的每个元素表示对应的配体元素在删除所有氢原子后的新索引。
-            然后，代码将更新 data 对象中的 ligand_nbh_list 属性，该属性可能表示每个配体元素的邻居列表。代码将删除所有包含氢原子的邻居，并将剩余邻居的索引更新为新的索引。"""
+
             # bond
             ind_bond_with_H = np.array([(bond_i in index_atom_H) | (bond_j in index_atom_H) for bond_i, bond_j in zip(*data.ligand_bond_index)])
             ind_bond_without_H = ~ind_bond_with_H
             old_ligand_bond_index = data.ligand_bond_index[:, ind_bond_without_H]
             data.ligand_bond_index = torch.tensor(index_changer)[old_ligand_bond_index]
             data.ligand_bond_type = data.ligand_bond_type[ind_bond_without_H]
-            """更新 data 对象中的 ligand_bond_index 和 ligand_bond_type 属性，这两个属性可能表示配体元素之间的键的索引和类型。
-            代码将删除所有包含氢原子的键，并将剩余键的索引更新为新的索引。"""
 
         return data
 
